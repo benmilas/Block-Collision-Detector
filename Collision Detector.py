@@ -8,10 +8,10 @@ win = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Collision Simulation")
 
 # dimensions of box1
-mass1 = 2
+mass1 = 10
 x1 = 600
 y1 = 400
-dx1 = -1
+dx1 = -5
 width1 = 100
 height1 = 100
 
@@ -33,7 +33,7 @@ height3 = 500
 # collision counter
 collisions = 0
 
-FPS = 120
+FPS = 60
 run = True
 clock = pygame.time.Clock()
 
@@ -77,12 +77,3 @@ while run:
         dx1 = ((mass1 - mass2) / (mass1 + mass2)) * dx1 + ((2 * mass2) / (mass1 + mass2)) * dx2
         dx2 = ((2 * mass1) / (mass1 + mass2)) * temp + ((mass2 - mass1) / (mass1 + mass2)) * dx2
     pygame.display.update()
-
-
-
-
-
-
-
-        
-
